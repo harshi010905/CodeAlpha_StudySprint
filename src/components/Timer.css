@@ -16,6 +16,13 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.timer-modes-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .timer-modes {
   display: flex;
   gap: 1rem;
@@ -36,6 +43,33 @@
   background: var(--cream);
   color: var(--text-main);
   box-shadow: var(--shadow-soft);
+}
+
+.custom-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-beige);
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+}
+
+.custom-time-input {
+  width: 60px;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-main);
+  text-align: center;
+  outline: none;
+}
+
+.custom-input-container span {
+  font-weight: 600;
+  color: var(--text-sub);
+  font-size: 0.9rem;
 }
 
 .timer-display {
@@ -125,4 +159,10 @@
 
 .active-pulse {
   animation: float 3s ease-in-out infinite;
+}
+
+.ringing {
+  background: #FF5252 !important;
+  color: white !important;
+  animation: shake 0.5s infinite;
 }

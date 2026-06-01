@@ -1,0 +1,5 @@
+services:
+  studysprint:
+    build: .
+    ports:
+      - "5173:5173"

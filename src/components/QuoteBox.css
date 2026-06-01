@@ -11,7 +11,7 @@
 }
 
 .quote-text {
-  color: white;
+  color: var(--text-main);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
