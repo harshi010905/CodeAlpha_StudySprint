@@ -1,24 +1,41 @@
-# StudySprint
+# 🚀 CodeAlpha_StudySprint
 
-StudySprint is a modern productivity and study management web application designed to help students stay organized, focused, and consistent in their learning journey. The application combines task management, productivity tracking, and study planning features within a clean and responsive user interface.
+StudySprint is a modern productivity and study management web application designed to help students organize tasks, manage study schedules, and improve productivity through a clean and interactive user experience.
 
----
-
-## Features
-
-* Sprint-based study timer
-* Task management system
-* Productivity tracking
-* Dark and Light mode support
-* Responsive user interface
-* Interactive animations
-* Modern React-based frontend
+This project was further enhanced with DevOps practices as part of the CodeAlpha DevOps Internship Program, including Docker containerization and Jenkins-based Continuous Integration (CI) automation.
 
 ---
 
-## Tech Stack
+# 📌 Project Overview
 
-### Frontend
+StudySprint helps students:
+
+* Manage daily study tasks
+* Organize learning schedules
+* Improve productivity
+* Track study progress
+* Maintain consistency through sprint-based planning
+
+The project was developed using modern frontend technologies and later integrated with DevOps tools to automate build and deployment workflows.
+
+---
+
+# ✨ Features
+
+* 📋 Task Management
+* 🎯 Study Sprint Planning
+* 🌙 Dark Mode Support
+* 📱 Responsive Design
+* ⚡ Fast User Interface
+* 🎨 Modern UI/UX
+* 🔄 CI Build Automation
+* 🐳 Dockerized Application
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
 
 * React.js
 * Vite
@@ -26,7 +43,7 @@ StudySprint is a modern productivity and study management web application design
 * HTML5
 * CSS3
 
-### DevOps & Tools
+## DevOps & Tools
 
 * Docker
 * Docker Compose
@@ -37,82 +54,13 @@ StudySprint is a modern productivity and study management web application design
 
 ---
 
-## Project Purpose
-
-This project was initially developed after completing the IBM SkillsBuild Web Development Fundamentals program to apply frontend development concepts in a real-world application.
-
-The project was later enhanced using DevOps practices to automate build processes, containerize the application, and implement Continuous Integration (CI) workflows.
-
----
-
-## DevOps Implementation
-
-### Docker Containerization
-
-The StudySprint application was containerized using Docker to ensure consistency across development and deployment environments.
-
-Key implementations:
-
-* Created a custom Dockerfile for the application
-* Built reusable Docker images
-* Isolated application dependencies from the host machine
-* Enabled environment-independent execution
-
-### Docker Compose
-
-Docker Compose was configured to simplify container management and application startup.
-
-Benefits:
-
-* Single-command application startup
-* Simplified container orchestration
-* Improved reproducibility across systems
-
-### Jenkins Continuous Integration
-
-Jenkins was installed and configured using Docker to automate build operations.
-
-Implemented workflow:
-
-* Connected Jenkins to GitHub repository
-* Automated repository cloning
-* Automated dependency installation using npm
-* Automated application build using Vite
-* Verified build success through Jenkins pipeline execution
-
----
-
-## CI/CD Workflow
-
-```text
-Developer
-    │
-    ▼
-GitHub Repository
-    │
-    ▼
-Jenkins Pipeline
-    │
-    ├── npm install
-    │
-    ├── npm run build
-    │
-    ▼
-Build Validation
-    │
-    ▼
-Deployment Environment
-```
-
----
-
-## Project Architecture
+# 🏗️ Project Architecture
 
 ```text
 User
  │
  ▼
-StudySprint Web Application
+StudySprint Application
  │
  ▼
 GitHub Repository
@@ -124,15 +72,135 @@ Jenkins CI Pipeline
 Docker Container
  │
  ▼
-Deployment Platform
+Deployment Environment
 ```
 
 ---
 
-## Project Structure
+# 🐳 Task 4: Web Server Using Docker
+
+## Objective
+
+Containerize the StudySprint application and manage it using Docker.
+
+## Implementation
+
+### Dockerfile
+
+Created a Dockerfile to:
+
+* Package the application
+* Install dependencies
+* Build the project
+* Run the application in an isolated container
+
+### Docker Image
+
+Built a reusable Docker image for consistent execution across different environments.
+
+### Docker Container
+
+Executed and managed application containers using Docker commands.
+
+### Docker Compose
+
+Configured Docker Compose to simplify deployment and container management.
+
+---
+
+## Docker Commands
+
+### Build Docker Image
+
+```bash
+docker build -t studysprint .
+```
+
+### Run Docker Container
+
+```bash
+docker run -p 5173:5173 studysprint
+```
+
+### Docker Compose
+
+```bash
+docker compose up
+```
+
+---
+
+# ⚙️ Task 2: Jenkins Remoting Project
+
+## Objective
+
+Implement Continuous Integration using Jenkins and understand Jenkins Remoting architecture.
+
+## Jenkins Setup
+
+The following components were configured:
+
+* Jenkins Installation using Docker
+* GitHub Repository Integration
+* Build Automation
+* Node.js Environment Setup
+* Jenkins Job Configuration
+
+## Jenkins CI Workflow
 
 ```text
-StudySprint
+Developer
+    │
+    ▼
+GitHub Repository
+    │
+    ▼
+Jenkins Pipeline
+    │
+    ├── Source Code Checkout
+    │
+    ├── npm install
+    │
+    ├── npm run build
+    │
+    ▼
+Build Validation
+```
+
+---
+
+## Automated Build Commands
+
+Jenkins executes:
+
+```bash
+npm install
+npm run build
+```
+
+This ensures every build is automatically validated before deployment.
+
+---
+
+## Jenkins Remoting Learning Outcomes
+
+During implementation, the following concepts were explored:
+
+* Jenkins Controller Architecture
+* Jenkins Agent Architecture
+* Jenkins Remoting
+* Docker Networking
+* Node Isolation
+* Remote Build Execution
+* Java Runtime Compatibility
+* WebSocket Agent Communication
+
+---
+
+# 📂 Project Structure
+
+```text
+CodeAlpha_StudySprint
 │
 ├── public/
 ├── src/
@@ -147,22 +215,22 @@ StudySprint
 
 ---
 
-## Installation
+# 🚀 Installation Guide
 
-### Clone Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/harshi010905/StudySprint.git
-cd StudySprint
+git clone https://github.com/harshi010905/CodeAlpha_StudySprint.git
+cd CodeAlpha_StudySprint
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Run Application
+## Start Development Server
 
 ```bash
 npm run dev
@@ -176,79 +244,86 @@ http://localhost:5173
 
 ---
 
-## Docker Setup
-
-### Build Docker Image
+# 🧪 Build Project
 
 ```bash
-docker build -t studysprint .
-```
-
-### Run Docker Container
-
-```bash
-docker run -p 5173:5173 studysprint
-```
-
----
-
-## Docker Compose Setup
-
-Start application using Docker Compose:
-
-```bash
-docker compose up
-```
-
----
-
-## Jenkins Build Automation
-
-The Jenkins pipeline performs the following actions automatically:
-
-```bash
-npm install
 npm run build
 ```
 
-Build status is validated through Jenkins, ensuring that code changes can be continuously tested and verified.
+Build files are generated inside the dist directory.
 
 ---
 
-## Screenshots
+# 📸 Screenshots
 
-### Application Dashboard
+## Application Dashboard
 
-(Add dashboard screenshot here)
+(Add Screenshot)
 
-### Docker Container Execution
+## Docker Container Running
 
-(Add Docker screenshot here)
+(Add Screenshot)
 
-### Jenkins Successful Build
+## Jenkins Successful Build
 
-(Add Jenkins build success screenshot here)
+(Add Screenshot)
+
+## Jenkins Console Output
+
+(Add Screenshot)
 
 ---
 
-## Learning Outcomes
+# 🎯 Learning Outcomes
 
-Through this project, the following concepts were implemented and explored:
+Through this project, the following skills were developed:
 
-* Frontend Development with React
 * Docker Containerization
-* Docker Compose Orchestration
-* Jenkins Continuous Integration
+* Docker Compose Configuration
+* Jenkins Installation & Configuration
 * GitHub Integration
+* Continuous Integration (CI)
+* Jenkins Remoting Concepts
 * Automated Build Pipelines
 * DevOps Fundamentals
+* Build Automation
 
 ---
 
-## Author
+# 📜 Internship Tasks Completed
+
+### ✅ Task 2: Jenkins Remoting Project
+
+* Jenkins Setup
+* GitHub Integration
+* Automated Builds
+* Jenkins Remoting Concepts
+* Remote Build Architecture Understanding
+
+### ✅ Task 4: Web Server Using Docker
+
+* Docker Containerization
+* Docker Image Creation
+* Docker Compose Configuration
+* Container Lifecycle Management
+
+---
+
+# 👩‍💻 Author
 
 **Harshitha Pasupureddy**
 
-B.Tech Computer Science Engineering
+B.Tech - Computer Science Engineering
 
-Focused on Web Development, Cloud Computing, DevOps, and AI-driven applications.
+Interests:
+
+* Web Development
+* DevOps
+* Cloud Computing
+* Artificial Intelligence
+
+---
+
+# ⭐ Acknowledgement
+
+This project was completed as part of the **CodeAlpha DevOps Internship Program**, focusing on practical implementation of Docker and Jenkins-based DevOps workflows.
